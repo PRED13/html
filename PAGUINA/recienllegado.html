@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recién llegados</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const botones = document.querySelectorAll("button");
+            botones.forEach(boton => {
+                boton.addEventListener("click", function() {
+                    const producto = this.closest("li");
+                    const nombre = producto.querySelector("h3").textContent;
+                    const precio = producto.querySelector("p").textContent;
+                    const imagen = producto.querySelector("img").src;
+                    
+                    const infoProducto = {
+                        nombre: nombre,
+                        precio: precio,
+                        imagen: imagen
+                    };
+                    
+                    localStorage.setItem("productoSeleccionado", JSON.stringify(infoProducto));
+                    window.location.href = "comprasss.html";
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="recuadro-rojo">Recién llegado</div>
+    <main>
+        <section class="productos">
+            <h2>Teléfonos nuevos</h2>
+            <ul>
+                <li>
+                    <img src="imagen/recien llegados/Samsung_Galaxy_S22.webp" alt="Teléfono 1">
+                    <h3>Samsung Galaxy S22</h3>
+                    <p>Precio: $999</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/iPhone 14.webp" alt="Teléfono 2">
+                    <h3>Apple iPhone 14</h3>
+                    <p>Precio: $1,099</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Pixel 6.webp" alt="Teléfono 3">
+                    <h3>Google Pixel 6</h3>
+                    <p>Precio: $799</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/OnePlus 9 Pro.webp" alt="Teléfono 4">
+                    <h3>OnePlus 9 Pro</h3>
+                    <p>Precio: $999</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Xiaomi Mi 11.webp" alt="Teléfono 5">
+                    <h3>Xiaomi Mi 11</h3>
+                    <p>Precio: $699</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Huawei P40 Pro.webp" alt="Teléfono 6">
+                    <h3>Huawei P40 Pro</h3>
+                    <p>Precio: $899</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Sony Xperia 1.webp" alt="Teléfono 7">
+                    <h3>Sony Xperia 1 III</h3>
+                    <p>Precio: $1,299</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/LG G8X ThinQ.webp" alt="Teléfono 8">
+                    <h3>LG G8X ThinQ</h3>
+                    <p>Precio: $799</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Moto G Power (2022).webp" alt="Teléfono 9">
+                    <h3>Moto G Power (2022)</h3>
+                    <p>Precio: $299</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Nokia G50.jpg" alt="Teléfono 10">
+                    <h3>Nokia G50</h3>
+                    <p>Precio: $399</p>
+                    <button>Comprar</button>
+                </li>
+            </ul>
+        </section>
+        <section class="productos">
+            <h2>Computadoras nuevas</h2>
+            <ul>
+                <li>
+                    <img src="imagen/recien llegados/Dell XPS 13.webp" alt="Computadora 1">
+                    <h3>Dell XPS 13</h3>
+                    <p>Precio: $999</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Apple MacBook Air.webp" alt="Computadora 2">
+                    <h3>Apple MacBook Air</h3>
+                    <p>Precio: $1,099</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/HP Envy x360.webp" alt="Computadora 3">
+                    <h3>HP Envy x360</h3>
+                    <p>Precio: $699</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Lenovo ThinkPad X1 Carbon.webp" alt="Computadora 4">
+                    <h3>Lenovo ThinkPad X1 Carbon</h3>
+                    <p>Precio: $1,299</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Zephyrus G14.webp" alt="Computadora 5">
+                    <h3>Asus ROG Zephyrus G14</h3>
+                    <p>Precio: $1,499</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/MSI Stealth 15M.webp" alt="Computadora 6">
+                    <h3>MSI Stealth 15M</h3>
+                    <p>Precio: $1,599</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Acer Predator Helios 300.webp" alt="Computadora 7">
+                    <h3>Acer Predator Helios 300</h3>
+                    <p>Precio: $1,399</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Razer Blade 15.webp" alt="Computadora 8">
+                    <h3>Razer Blade 15</h3>
+                    <p>Precio: $2,299</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/HP Spectre x360.webp" alt="Computadora 9">
+                    <h3>HP Spectre x360</h3>
+                    <p>Precio: $1,299</p>
+                    <button>Comprar</button>
+                </li>
+                <li>
+                    <img src="imagen/recien llegados/Microsoft Surface Laptop Studio.webp" alt="Computadora 10">
+                    <h3>Microsoft Surface Laptop Studio</h3>
+                    <p>Precio: $1,899</p>
+                    <button>Comprar</button>
+                </li>
+            </ul>
+        </section>
+                <section class="productos">
+                    <h2>Otros productos electrónicos</h2>
+                    <ul>
+                        <li>
+                            <img src="imagen/recien llegados/Samsung Galaxy Watch 5.webp" alt="Smartwatch 1">
+                            <h3>Samsung Galaxy Watch 5</h3>
+                            <p>Precio: $349</p>
+                            <button>Comprar</button>
+                        </li>
+                        <li>
+                            <img src="imagen/recien llegados/Apple AirPods Pro 2.webp" alt="Auriculares 1">
+                            <h3>Apple AirPods Pro 2</h3>
+                            <p>Precio: $249</p>
+                            <button>Comprar</button>
+                        </li>
+                        <li>
+                            <img src="imagen/recien llegados/Sony WH-1000XM5.webp" alt="Auriculares 2">
+                            <h3>Sony WH-1000XM5</h3>
+                            <p>Precio: $399</p>
+                            <button>Comprar</button>
+                        </li>
+                        <li>
+                            <img src="imagen/recien llegados/Oculus Quest 2.webp" alt="VR 1">
+                            <h3>Oculus Quest 2</h3>
+                            <p>Precio: $499</p>
+                            <button>Comprar</button>
+                        </li>
+                        <li>
+                            <img src="imagen/recien llegados/Nintendo Switch OLED.webp" alt="Consola 1">
+                            <h3>Nintendo Switch OLED</h3>
+                            <p>Precio: $349</p>
+                            <button>Comprar</button>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </body>
+        </html>
+            <main>
+                <section class="productos">
+                    <h2>Teléfonos nuevos</h2>
+                    <ul>
+                        <li>
+                            <img src="imagen/recien llegados/Samsung_Galaxy_S22.webp" alt="Teléfono 1">
+                            <h3>Samsung Galaxy S22</h3>
+                            <p>Precio: $999</p>
+                            <button class="comprar">Comprar</button>
+                        </li>
+                        
+                        <li>
+                            <img src="imagen/recien llegados/iPhone 14.webp" alt="Teléfono 2">
+                            <h3>Apple iPhone 14</h3>
+                            <p>Precio: $1,099</p>
+                            <button class="comprar">Comprar</button>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </body>
+        </html>

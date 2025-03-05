@@ -1,0 +1,24 @@
+#menu {
+  font-family: Arial;
+ }
+ #menu p {
+  margin:0px;
+  padding:0px; /*relleno del cuadro*/
+ }
+
+ #menu a {
+  display: block;/*enlaces como bloque*/
+  padding: 3px;/*relleno*/
+  width: 160px;/*ancho de enlaces*/
+  background-color: #f7f8e8;
+  border-bottom: 1px solid #eeeeee;
+  text-align:center;
+ }
+ #menu a:link, #menu a:visited {
+  color: #ff0000;
+  text-decoration: none;
+ }
+ #menu a:hover {
+  background-color: #336699;
+  color: #ffffff;
+ }

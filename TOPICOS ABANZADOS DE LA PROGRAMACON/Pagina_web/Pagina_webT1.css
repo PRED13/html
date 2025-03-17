@@ -1,0 +1,126 @@
+/* Estilos generales */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+  
+  /* Cabecera */
+  
+  header {
+    background-color: #ff0000; /* Rojo */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  /* Contenido principal */
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .productos {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+  }
+  
+  .productos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .productos li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    width: calc(20% - 20px); /* 5 por fila */
+    box-sizing: border-box;
+  }
+  
+  .productos li:last-child {
+    border-bottom: none;
+  }
+  
+  .productos img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .productos h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .productos p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  /* Botones */
+  
+  .button {
+    background-color: #007bff; /* Azul */
+    color: #fff;
+    padding: 20px 40px; /* Tamaño más grande */
+    font-size: 20px; /* Letra más grande */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #ff0000; /* Rojo al pasar el mouse */
+    transform: scale(1.05);
+  }
+  
+  .button-rojo {
+    background-color: #ff0000; /* Rojo */
+  }
+  
+  .button-rojo:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Pie de página */
+  
+  footer {
+    background-color: #ff0000; /* Rojo */
+    padding: 20px;
+    text-align: center;
+    clear: both;
+  }
+  
+  footer p {
+    color: #fff;
+    font-size: 14px;
+  }

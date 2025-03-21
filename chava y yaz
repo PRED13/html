@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor Amarilla Animada</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #3da5fb;
+            overflow: hidden;
+            margin: 0;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .contenedor {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            animation: aparecer 2s ease-in-out;
+        }
+
+        .tallo {
+            position: relative;
+            width: 12px;
+            height: 180px;
+            background: linear-gradient(to bottom, #388e3c, #2e7d32);
+            border-radius: 5px;
+            z-index: -1;
+        }
+
+        .hoja {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            background: linear-gradient(to right, #4caf50, #388e3c);
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .hoja:nth-child(1) {
+            top: 50px;
+            left: -25px;
+            transform: rotate(-30deg);
+        }
+
+        .hoja:nth-child(2) {
+            top: 100px;
+            left: 5px;
+            transform: rotate(30deg);
+        }
+
+        .flor {
+            position: absolute;
+            top: -40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: crecer 2s ease-in-out, iluminarFondo 3s ease-in-out forwards;
+            z-index: 1;
+        }
+
+        .petalo {
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            background: radial-gradient(circle, #ffeb3b, #fbc02d);
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .petalo:nth-child(1) { transform: rotate(0deg) translateY(-40px); }
+        .petalo:nth-child(2) { transform: rotate(45deg) translateY(-40px); }
+        .petalo:nth-child(3) { transform: rotate(90deg) translateY(-40px); }
+        .petalo:nth-child(4) { transform: rotate(135deg) translateY(-40px); }
+        .petalo:nth-child(5) { transform: rotate(180deg) translateY(-40px); }
+        .petalo:nth-child(6) { transform: rotate(225deg) translateY(-40px); }
+        .petalo:nth-child(7) { transform: rotate(270deg) translateY(-40px); }
+        .petalo:nth-child(8) { transform: rotate(315deg) translateY(-40px); }
+
+        .centro {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle, #ff9800, #e65100);
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Estilos para el mensaje */
+        .mensaje {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            opacity: 0;
+            animation: aparecer 2s ease-in-out forwards;
+            animation-delay: 2s;
+        }
+
+        /* Animación para hacer que la flor y el mensaje aparezcan */
+        @keyframes aparecer {
+            from { opacity: 0; transform: scale(0); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Animación de la flor al aparecer */
+        @keyframes crecer {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Animación para iluminar el fondo alrededor de la flor */
+        @keyframes iluminarFondo {
+            0% { 
+                box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 150px 100px rgba(255, 204, 0, 0.6);
+            }
+            100% { 
+                box-shadow: 0 0 250px 150px rgba(255, 204, 0, 0.9);
+            }
+        }
+
+        /* Animación de lluvia de nombres y corazones */
+        @keyframes caer {
+            from {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Estilos para los nombres y corazones */
+        .emoji {
+            position: absolute;
+            font-size: 30px;
+            top: -50px;
+            animation: caer 3s linear forwards;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="flor">
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="centro"></div>
+        </div>
+        <div class="tallo">
+            <div class="hoja"></div>
+            <div class="hoja"></div>
+        </div>
+        <div class="mensaje">¿Quieres ayudarme a juntar al Chava con la Yaz?</div>
+    </div>
+
+    <script>
+        function crearNombreYCorazon() {
+            const contenedor = document.createElement("div");
+            contenedor.classList.add("emoji");
+
+            // Crear el nombre o el corazón
+            const esNombre = Math.random() > 0.5;
+            if (esNombre) {
+                contenedor.innerText = Math.random() > 0.5 ? "Chava" : "Yaz";
+            } else {
+                contenedor.innerText = "❤️";
+            }
+
+            // Posicionar aleatoriamente
+            contenedor.style.left = Math.random() * window.innerWidth + "px";
+            contenedor.style.animationDuration = (Math.random() * 2 + 2) + "s"; 
+            document.body.appendChild(contenedor);
+
+            setTimeout(() => {
+                contenedor.remove();
+            }, 3000);
+        }
+
+        function empezarLluvia() {
+            setInterval(crearNombreYCorazon, 200);
+        }
+
+        setTimeout(empezarLluvia, 4000);
+    </script>
+</body>
+</html>

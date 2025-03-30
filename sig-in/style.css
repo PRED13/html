@@ -1,0 +1,12 @@
+.boton-iniciar-sesion{
+    background-color: rgb(35, 132, 241);
+    color: rgb(255, 255, 255);
+    width: 350px;
+    height: 30px;
+}
+.boton-iniciar-sesion:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(224, 37, 4);
+    cursor: pointer;
+    
+}  

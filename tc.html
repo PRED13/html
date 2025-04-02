@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama E-R Persona_Pasaporte</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .diagram-container {
+            perspective: 1000px;
+        }
+        
+        .entity {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+            width: 300px;
+            padding: 20px;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .entity:hover {
+            transform: translateY(-10px) rotateX(5deg);
+        }
+        
+        .entity-title {
+            background-color: #4a6fa5;
+            color: white;
+            padding: 10px 15px;
+            margin: -20px -20px 20px -20px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.2em;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .attribute {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .attribute:last-child {
+            border-bottom: none;
+        }
+        
+        .attribute-name {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .attribute-type {
+            color: #666;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .pk {
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .pk::before {
+            content: "PK";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 0.7em;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        .uk {
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .uk::before {
+            content: "UK";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            background-color: #2196F3;
+            color: white;
+            font-size: 0.7em;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        .legend {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <div class="entity">
+            <div class="entity-title">PERSONA_PASAPORTE</div>
+            
+            <div class="attribute pk">
+                <span class="attribute-name">id_persona</span>
+                <span class="attribute-type">INT</span>
+            </div>
+            
+            <div class="attribute">
+                <span class="attribute-name">nombre</span>
+                <span class="attribute-type">VARCHAR(100)</span>
+            </div>
+            
+            <div class="attribute">
+                <span class="attribute-name">nacionalidad</span>
+                <span class="attribute-type">VARCHAR(50)</span>
+            </div>
+            
+            <div class="attribute uk">
+                <span class="attribute-name">numero_pasaporte</span>
+                <span class="attribute-type">VARCHAR(20)</span>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <h3>Leyenda:</h3>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #4CAF50;"></div>
+                <span>PK - Primary Key (Clave Primaria)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #2196F3;"></div>
+                <span>UK - Unique Key (Clave Única)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

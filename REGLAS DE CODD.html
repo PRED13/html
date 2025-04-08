@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa sinóptico: Las 12 Reglas de Codd</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    .mapa {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .titulo {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 20px;
+      border-left: 2px solid #555;
+    }
+
+    li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      background-color: #555;
+      border-radius: 50%;
+    }
+
+    strong {
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <div class="mapa">
+    <div class="titulo">Mapa sinóptico: Las 12 Reglas de Codd</div>
+    <ul>
+      <li><strong>1. Información:</strong> Todos los datos deben estar representados en tablas.</li>
+      <li><strong>2. Acceso garantizado:</strong> Todo dato es accesible mediante clave y columna.</li>
+      <li><strong>3. Valores nulos:</strong> Debe haber tratamiento para representar datos ausentes.</li>
+      <li><strong>4. Catálogo en línea:</strong> Metadatos accesibles usando el mismo esquema relacional.</li>
+      <li><strong>5. Sublenguaje completo:</strong> Lenguaje que permita operaciones completas sobre la base.</li>
+      <li><strong>6. Actualización de vistas:</strong> Las vistas deben reflejar los cambios en los datos.</li>
+      <li><strong>7. Inserciones, modificaciones y eliminaciones:</strong> Deben operar sobre conjuntos de datos, no individualmente.</li>
+      <li><strong>8. Independencia física:</strong> Cambios físicos no deben afectar el acceso lógico a los datos.</li>
+      <li><strong>9. Independencia lógica:</strong> Cambios en tablas no deben afectar a los programas.</li>
+      <li><strong>10. Independencia de integridad:</strong> Las reglas deben estar en la base, no en los programas.</li>
+      <li><strong>11. Independencia de distribución:</strong> Las instrucciones deben funcionar en bases distribuidas o no.</li>
+      <li><strong>12. No subversión:</strong> Lenguaje del SGBD no debe permitir violar las reglas anteriores.</li>
+    </ul>
+  </div>
+</body>
+</html>

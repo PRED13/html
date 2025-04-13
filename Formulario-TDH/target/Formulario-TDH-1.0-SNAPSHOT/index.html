@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario con Tipos de Datos Abstrctos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <section class="content-form">
+        <h3>Agencia de autos "tesji"</h3>
+        <form action="/calcular-impuesto" method="post">
+            <label>
+                <select size ="1" class="componentes" name="selectOrigen">
+                    <option value="no">selecione Origen</option>
+                    <option value="alemania">Alemania</option>
+                    <option value="japon">Japon</option>
+                    <option value="italia">Italia</option>
+                    <option value="usa">Estados Unidos</option>
+                </select>
+            </label>
+
+            <label>
+                <select size="1" class="componentes" name="selectMarca">
+                    <option value="no">selecione marca</option>
+                    <option value="RR">ROLLS ROYCE</option>
+                    <option value="T">TOYOTA</option>
+                    <option value="nissn">NISSAN</option>
+                    <option value="subaru">SUBARU</option>
+                    <option value="koenigsen">KOENIGSEN</option>
+                </select>
+            </label>
+
+            <label>
+                <input type="number" placeholder="ingresa el costo del auto" class="componentes" name="txtCosto">
+            </label>
+
+            <input type="Button" value ="calcular" class="botones">
+            <!--<input type = "reset" class = "botones" cancelar>-->
+            <input type="reset" value ="cancelar" id="btn-cancel" class="botones">
+        </form>
+    </section>
+</body>
+</html>

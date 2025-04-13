@@ -1,0 +1,65 @@
+/*esto es un comentario en css */
+/*Selector universal: la regla de diseño afecta a todo el domumento de html */
+*{/*reseteando los estilos del navegador (normalize.css o reset.css)*/
+    margin: 0;
+    padding; 0;
+    box-sizing: border-box;
+}
+
+/*selector de etiqueta: toman el nombre de la etiqueta html y afecta a las incluidas en el documento html*/
+
+h3{
+    color:red /*color de fuente*/
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+body{
+    background color: cyan;/*color de fondo*/
+}
+/*SELECTOR DE CLASE(.): Define una regla de diseño que puede ser reutilizada por otros contenedores*/
+.content-form{
+    width: 480px /*tamaño de ancho*/
+    background-color: purple;
+    border: 3px solid yellow; /*contorno del contenedor*/
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px /*redondear esquinas del contenedor*/
+    font-family: "calibri"; /*estilo de fuente*/
+    font-size: 1en;/*tamaño de fuente 1 en equivale a 16px*/
+    padding: 10px;
+    box-shadow: 7px 13px 37px #EDE7F6;
+}
+.componentes{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.botones{
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    background-color: gold;
+    border-radius: 12px;
+    color: #EDE7F6;
+    background-color: #B388FF;
+    border: none;
+}
+
+/*SELECTOR DE PSEUDOCLASES TRABAJAN EN CONJUNTO CON LOS SELECTORES DE CLASE, para adicionalmente tienes alguna accion como eventos etc.*/
+.botones:hover{
+    background-color:#651FFF;
+    color: withe;
+    font-size 23px;
+    cursor: pointer;
+}
+/*SELECTOR INDENTFICADOR (id en html) y (en CSS le antepones un gato) SE UTILIZAN PARA CAMBIAR ALGUNAS PROPIEDADES DE UNA CLASE
+ CONSERVADA LAS PROPIEDADES DE LA CLASE*/
+ #btn-cancel{
+    background-color:#EF5358;
+ }

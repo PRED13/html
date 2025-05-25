@@ -1,42 +1,51 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agencia de autos "TESJI"</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="Estilo.css">
 </head>
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
 <body>
-    <section class="contec-form">
-        <h3>Agencia de autos y MOTOS "TESJI"</h3>
-        <form id="formulario">
-            <select size="1" class="componentes" name="selectOrigen" required>
-                <option value="">Selecciona el origen del auto</option>
-                <option value="alemania">Alemania</option>
-                <option value="italia">Italia</option>
-                <option value="japon">Japón</option>
-                <option value="usa">Estados Unidos</option>
-            </select>
 
-            <select size="1" class="componentes" name="seleccioneMarca" required>
-                <option value="">Seleccione la marca</option>
-                <option value="vw">Toyota</option>
-                <option value="koenigsen">Koenigsen</option>
-                <option value="nissan">Nissan</option>
-                <option value="mazda">Mazda</option>
-                <option value="audi">Rolls Roys</option>
-                <option value="mercedez">Subaru</option>
-                <option value="ford">Ford</option>
-                <option value="suzuki">Suzuki</option>
-            </select>
+    <div class="navbar">
+        <div>
+            <img src="Imagen/Tec.png" alt="logo" style="float: left;" width="110" height="130">
+            <br>
+        <p><strong><font size="5">CONTROL Y REGISTRO DE LA CARRERA ATLÉTICA</font> </strong></p>
+    </div>
+    <div>
+        <a href="#">Inicio</a>
+        <a href="#">Registros de Entrada</a>
+        <a href="#" >Corredores</a>
+    </div>
+    </div>
 
-            <input type="number" placeholder="Ingrese El Costo Del Auto" class="componentes" name="txtCosto" required>
-            <input type="submit" value="Calcular" class="botones">
-            <button type="reset" class="botones" id="btn-cancel">Cancelar</button>
-            <input type="text">
-        </form>
-    </section>
-    <!-- Vincular el archivo JavaScript externo -->
-    <script src="script.js"></script>
+    <div class="container">
+        
+        <h2>Entrada de Registros</h2>
+        <strong>BÚSQUEDA</strong>
+    </div> 
+
+    <table>
+        <tr>
+            <th>Posición</th>
+            <th>KIID</th>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Carrera</th>
+            <th>Categoría</th>
+            <th>Tiempo Inicio</th>
+            <th>Tiempo Final</th>
+        </tr>
+    </table>
+    <footer>
+            <div class="rectangulo">
+              <p>&copy; 2023 Derechos reservados</p>
+            </div>
+          </footer>
 </body>
 </html>

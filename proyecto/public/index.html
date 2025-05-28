@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Final</title>
+  <link rel="stylesheet" href="Estilo.css">
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="navbar">
+    <div>
+      <img src="Imagen/Tec.png" alt="logo" style="float: left;" width="110" height="130">
+      <br>
+      <p><strong><font size="5">CONTROL Y REGISTRO DE LA CARRERA ATLÉTICA</font></strong></p>
+    </div>
+    <div>
+      <a href="#">Inicio</a>
+      <a href="#">Registros de Entrada</a>
+      <a href="#">Corredores</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Entrada de Registros</h2>
+    <strong>BÚSQUEDA</strong>
+
+  <table id="tablaRegistros">
+    <thead>
+      <tr>
+        <th>Posición</th>
+        <th>KIID</th>
+        <th>Nombre</th>
+        <th>Apellido Paterno</th>
+        <th>Apellido Materno</th>
+        <th>Carrera</th>
+        <th>Categoría</th>
+        <th>Tiempo Inicio</th>
+        <th>Tiempo Final</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <footer>
+    <div class="rectangulo">
+      <p>&copy; 2023 Derechos reservados</p>
+    </div>
+  </footer>
+</body>
+</html>

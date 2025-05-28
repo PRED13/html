@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Corredores</title>
+  <link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+  <div class="navbar">
+    <div>
+      <img src="Imagen/Tec.png" alt="logo" style="float: left;" width="110" height="130">
+      <br>
+      <p><strong><font size="5">REGISTRO DE CORREDORES</font></strong></p>
+    </div>
+    <div>
+      <a href="index.html">Inicio</a>
+      
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Formulario de Registro</h2>
+    <form id="registroForm">
+      <label>Posición: <input type="number" name="posicion" required></label><br>
+      <label>KIID: <input type="text" name="kiid" required></label><br>
+      <label>Nombre: <input type="text" name="nombre" required></label><br>
+      <label>Apellido Paterno: <input type="text" name="apellidoP" required></label><br>
+      <label>Apellido Materno: <input type="text" name="apellidoM" required></label><br>
+      <label>Carrera: <input type="text" name="carrera" required></label><br>
+      <label>Categoría: <input type="text" name="categoria" required></label><br>
+      <label>Tiempo Inicio: <input type="text" name="tiempoInicio" placeholder="00:00:00" required></label><br>
+      <label>Tiempo Final: <input type="text" name="tiempoFinal" placeholder="00:00:00" required></label><br>
+      <button type="submit">Registrar Corredor</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="rectangulo">
+      <p>&copy; 2023 Derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="registro.js"></script>
+</body>
+</html>

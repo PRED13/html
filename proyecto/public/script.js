@@ -1,6 +1,6 @@
 const socket = io();
 
-// Mostrar registros ya guardados al cargar la página
+// Mostrar registros ya guardados al cargar la página.
 fetch("/registros")
   .then(res => res.json())
   .then(corredores => {

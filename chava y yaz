@@ -17,6 +17,8 @@
             position: relative;
         }
 
+
+
         .contenedor {
             position: relative;
             display: flex;
@@ -24,6 +26,7 @@
             flex-direction: column;
             animation: aparecer 2s ease-in-out;
         }
+
 
         .tallo {
             position: relative;
